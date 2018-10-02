@@ -1,2 +1,2 @@
 # Python
-All services related python code
+Python codes 

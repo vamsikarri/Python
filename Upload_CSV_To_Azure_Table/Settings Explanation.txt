@@ -1,0 +1,29 @@
+Script Settings:
+drop_table_if_existing (Boolean): If true, this script will existing tables if their name matches.  If false, it will instead append the contents of the CSV to the table.
+upload_blobs (Boolean): If true, will upload the csv files to blob storage.  Only set this to false if you are uploading blobs via some other means.  Note if true, this script will overwrite files with the same name as the ones you're uploading.
+
+
+SQL Server Info:
+server_name (String): Server name.  Your server address in the Azure web interface is of the form <server_name>.database.windows.net
+database (String): The name of your SQL Azure database or Azure SQL Data Warehouse.
+username (String): The username used to log into the server hosting your SQL Azure database or Azure SQL Data Warehouse.
+password (String): The password used to log into the server hosting your SQL Azure database or Azure SQL Data Warehouse.
+schema_name (String): The schema where your table will be made.
+warehouse (Boolean): True if your target database is a SQL Data Warehouse, false otherwise.
+
+Blob Service info:
+container_name (String): The name of the container to be used for staging blob files.  Will be created if it does not exist.
+
+Azure info
+subscription_id (String): Your Azure subscription ID.
+AD_client_id (String): Your Azure AD client ID.
+AD_client_secret (String): Your Azure AD client secret.
+AD_tenant_id (String): Your Azure Application id that corresponds to this script.
+rg_name (String): The name of the resource group that should be used by this script.  Will be created if it doesn't exist.
+
+Data Factory info:
+df_name (String):- Base name of the data factory you want to use.  Will be created if it does not exist.
+
+CSV info:
+Leave values as they are for a default, correctly formatted CSV file.
+Only modify these if you know what you're doing.
